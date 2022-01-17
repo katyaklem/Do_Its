@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Do It's - registration</title>
+	</head>
+	<body>
+		<div class="login">
+			<form class="login_form" method="post">
+
+        		<label for="second_name"><b>Введіть вашу фамілію</b></label>
+    			<input type="text" placeholder="Фамілія" name="second_name" required><br>
+
+    			<label for="first_name"><b>Введіть ваше ім'я</b></label>
+    			<input type="text" placeholder="Ім'я" name="first_name" required><br>
+
+    			<label for="patronymic"><b>Введіть ваше побатькове</b></label>
+    			<input type="text" placeholder="Побатькове" name="patronymic" required><br>
+
+    			<legend>Оберіть ваш інститут</legend>
+        		<input type="radio" required name="institute" value="Навчально-науковий інститут Бізнесу та соціальних комунікацій">Навчально-науковий інститут Бізнесу та соціальних комунікацій<br>
+        		<input type="radio" required name="institute" value="Автоматизація та комп’ютерно-інтегровані технології">Автоматизація та комп’ютерно-інтегровані технології<br>
+        		<input type="radio" required name="institute" value="авчально-науковому інституті радіо, телебачення та інформаційної безпеки">Навчально-науковому інституті радіо, телебачення та інформаційної безпеки<br>
+        		<input type="radio" required name="institute" value="Телекомунікації та радіотехніка">Телекомунікації та радіотехніка<br>
+
+        		<select required name="speciality">
+    			<option disabled>Оберіть вашу спеціальність</option>
+    			<option value="051 Економіка">051 Економіка</option>
+   				<option value="073 Менеджмент">073 Менеджмент</option>
+    			<option value="054 Соціологія">054 Соціологія</option>
+    			<option value="061 Журналістика">061 Журналістика</option>
+    			<option value="153 Мікро- та нано системна техніка">153 Мікро- та нано системна техніка</option>
+    			<option value="151 Автоматизація та комп’ютерно- інтегровані технології">151 Автоматизація та комп’ютерно- інтегровані технології</option>
+    			<option value="275 Транспортні технології">275 Транспортні технології</option>
+    			<option value="011 Освітні, педагогічні науки">011 Освітні, педагогічні науки</option>
+    			<option value="125 Кібербезбека">125 Кібербезбека</option>
+    			<option value="121 Інженерія програмного забезпечення">121 Інженерія програмного забезпечення</option>
+    			<option value="122 Комп'ютерні науки">122 Комп'ютерні науки</option>
+    			<option value="172 Телекомунікацї та радіотехніка">172 Телекомунікацї та радіотехніка</option>
+   				</select>
+
+   				<select required name="speciality">
+    			<option disabled>Оберіть рік навчання (курс)</option>
+    			<option value="1">1</option>
+    			<option value="2">2</option>
+    			<option value="3">3</option>
+    			<option value="4">4</option>
+    			<option value="5">5</option>
+    			<option value="6">6</option>
+
+    			<label for="email"><b>Введіть електронну адресу</b></label>
+    			<input type="email" placeholder="Електронна адреса" name="email" required><br>
+
+    			<label for="telephone"><b>Введіть номер мобільного телефону</b></label>
+    			<input type="tel" placeholder="Номер мобільного телефону" name="telephone" required><br>
+
+    			<label for="password"><b>Введіть пароль</b></label>
+    			<input type="password" placeholder="Пароль" name="second_name" required><br>
+
+    			<input type="submit" value="Зареєструватись">
+			</form>
+		</div>
+	</body>
+</html>
