@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>My_FB</title>
+	</head>
+	<body>
+		<div>
+			{% if username %}
+			<p>Доброго дня {{username}}! Оберіть данні для роботи.</p>
+			<div>
+				<a href="admin_student_work">Робота з данними студентів</a>
+				<a href="">Робота з данними викладачів</a>
+			</div>
+			<a href="/logout">Logout</a>
+			{% else %}
+			<p>You are not logged in</p>
+			<a href="/login">Login</a>
+			{% endif %}
+		</div>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form class="schedule_form" method="post">
+            <select required name="day">
+    			<option disabled>День тиждня</option>
+    			<option value="Понеділок">Понеділок</option>
+                <option value="Вівторок">Вівторок</option>
+                <option value="Середа">Середа</option>
+                <option value="Четверг">Четверг</option>
+                <option value="П'ятниця">П'ятниця</option>
+            </select>
+            <select required name="lesson_number">
+    			<option disabled>Номер пари</option>
+    			<option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <input type="text" placeholder="Назва предмету" name="subject_name" required>
+            <input type="text" placeholder="Викладач" name="teacher_name" required>
+            <input type="text" placeholder="Номер кабінету" name="room_number" required>
+            <label>Вид роботи</label>
+            <input type="radio" name="work_type" value="Лк">Лк</input>
+            <input type="radio" name="work_type" value="Пр">Пр</input>
+            <input type="radio" name="work_type" value="Лб">Лб</input>
+            <label>Номер тиждня</label>
+            <input type="radio" name="week_type" value="П">Парний тиждень</input>
+            <input type="radio" name="week_type" value="НП">Непарний тиждень</input>
+            <input type="submit" value="Додати пару">
+    </form>
+    {{lesson_number}}
+    {% if subject_name == "{ТКСП}" %}
+    <div>{{subject_name}}{{teacher_name}}{{room_number}}{{work_type}}{{week_type}}</div>
+    {% endif %}
+    <table>
+        <tr>
+            <td></td>
+            <td>Понеділок</td><td>Вівторок</td><td>Середа</td><td>Четверг</td><td>П'ятниця</td>
+        </tr>
+        <tr>
+            <td>Перша пара</td>
+            <td>{{subject_name}}{{teacher_name}}{{room_number}}{{work_type}}{{week_type}}</td>
+            <td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>Друга пара</td>
+            <td>{{subject_name}}{{teacher_name}}{{room_number}}{{work_type}}{{week_type}}</td>
+            <td></td><td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+            <td>Третя пара</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr>
+            <td>Четверта пара</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr>
+            <td>П'ята пара</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr>
+            <td>Шоста пара</td><td></td><td></td><td></td><td></td><td></td></tr>
+    </table>
+</body>
+</html>
