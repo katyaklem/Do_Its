@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="tabl_pos">
+<table>
+    <tr>
+        <td>Прізвище</td>
+        <td>І'мя</td>
+        <td>Побатькове</td>
+        <td>Номер телефону</td>
+    </tr>
+    {% for number in number_of_students %}
+        <tr>
+            <td>{{my_group['Прізвище'][number]}}</td>
+            <td>{{my_group['Імя'][number]}}</td>
+            <td>{{my_group['Побатькове'][number]}}</td>
+            <td>{{my_group['Номер телефону'][number]}}</td>
+        </tr>
+    {% endfor %}
+</table>
+</div>
+    <a class="welcome_btn" href="home_student">На головну</a>
+</body>
+</html>

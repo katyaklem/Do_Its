@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+some <br>
+{{some_some}}<br>
+    {{schedule['Понеділок']['1'][0]}}<br>
+    {{schedule['Понеділок']['2']}}<br>
+    {{schedule['Вівторок']['2']}}
+    {{schedule}}
+</body>
+</html>
+
+<tr>
+            <td>Перша пара</td>
+            <td>
+                {{schedule['Понеділок']['1'][0]}}
+                {{schedule['Понеділок']['1'][1]}}
+                {{schedule['Понеділок']['1'][2]}}
+                {{schedule['Понеділок']['1'][3]}}
+                {{schedule['Понеділок']['1'][4]}}
+            </td>
+            <td>
+                {{schedule['Вівторок']['1'][0]}}
+                {{schedule['Вівторок']['1'][1]}}
+                {{schedule['Вівторок']['1'][2]}}
+                {{schedule['Вівторок']['1'][3]}}
+                {{schedule['Вівторок']['1'][4]}}
+            </td>
+            <td>
+            </td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Друга пара</td>
+            <td>
+                {{schedule['Понеділок']['2'][0]}}
+                {{schedule['Понеділок']['2'][1]}}
+                {{schedule['Понеділок']['2'][2]}}
+                {{schedule['Понеділок']['2'][3]}}
+                {{schedule['Понеділок']['2'][4]}}
+            </td>
+            <td>
+                {{schedule['Вівторок']['2'][0]}}
+                {{schedule['Вівторок']['2'][1]}}
+                {{schedule['Вівторок']['2'][2]}}
+                {{schedule['Вівторок']['2'][3]}}
+                {{schedule['Вівторок']['2'][4]}}
+            </td><td></td><td></td><td></td>
+        </tr>
+
+
+<table>
+        <tr>
+            <td></td>
+            <td>Понеділок</td><td>Вівторок</td><td>Середа</td><td>Четверг</td><td>П'ятниця</td>
+        </tr>
+        <tr>
+            <td>Перша пара</td>
+            <td>
+                {{schedule['Понеділок']['1'][0]}}
+                {{schedule['Понеділок']['1'][1]}}
+                {{schedule['Понеділок']['1'][2]}}
+                {{schedule['Понеділок']['1'][3]}}
+                {{schedule['Понеділок']['1'][4]}}
+            </td>
+            <td>
+                {{schedule['Вівторок']['1'][0]}}
+                {{schedule['Вівторок']['1'][1]}}
+                {{schedule['Вівторок']['1'][2]}}
+                {{schedule['Вівторок']['1'][3]}}
+                {{schedule['Вівторок']['1'][4]}}
+            </td>
+            <td>
+            </td>
+            <td>
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Друга пара</td>
+            <td>
+                {{schedule['Понеділок']['2'][0]}}
+                {{schedule['Понеділок']['2'][1]}}
+                {{schedule['Понеділок']['2'][2]}}
+                {{schedule['Понеділок']['2'][3]}}
+                {{schedule['Понеділок']['2'][4]}}
+            </td>
+            <td>
+                {{schedule['Вівторок']['2'][0]}}
+                {{schedule['Вівторок']['2'][1]}}
+                {{schedule['Вівторок']['2'][2]}}
+                {{schedule['Вівторок']['2'][3]}}
+                {{schedule['Вівторок']['2'][4]}}
+            </td><td></td><td></td><td></td>
+        </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <td>Перша пара</td>
+            {% for subject in schedule %}
+                {% if subject.lesson_number == '1' %}
+                {% if subject.day == 'Понеділок'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% endif %}
+                {% if subject.lesson_number == '1' %}
+                {% if subject.day == 'Вівторок'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% endif %}
+                {% if subject.lesson_number == '1' %}
+                {% if subject.day == 'Середа'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% endif %}
+                {% if subject.lesson_number == '1' and subject.day == 'Четверг'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '1' and subject.day == 'П`ятниця'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Друга пара</td>
+            {% for subject in schedule %}
+                {{subject.lesson_number}}
+                {% if subject.lesson_number == '2' and subject.day == 'Понеділок'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '2' and subject.day == 'Вівторок'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '2' and subject.day == 'Середа'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '2' and subject.day == 'Четверг'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '2' and subject.day == 'П`ятниця'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Перша пара</td>
+            {% for subject in schedule%}
+                {{subject.lesson_number}}
+                {% if subject.lesson_number == '3' and subject.day == 'Понеділок'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '3' and subject.day == 'Вівторок'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '3' and subject.day == 'Середа'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '3' and subject.day == 'Четверг'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '3' and subject.day == 'П`ятниця'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Перша пара</td>
+            {% for subject in schedule%}
+                {{subject.lesson_number}}
+                {% if subject.lesson_number == '4' and subject.day == 'Понеділок'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '4' and subject.day == 'Вівторок'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '4' and subject.day == 'Середа'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '4' and subject.day == 'Четверг'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '4' and subject.day == 'П`ятниця'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Перша пара</td>
+            {% for subject in schedule%}
+                {{subject.lesson_number}}
+                {% if subject.lesson_number == '5' and subject.day == 'Понеділок'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '5' and subject.day == 'Вівторок'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '5' and subject.day == 'Середа'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '5' and subject.day == 'Четверг'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '5' and subject.day == 'П`ятниця'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Перша пара</td>
+            {% for subject in schedule%}
+                {{subject.lesson_number}}
+                {% if subject.lesson_number == '6' and subject.day == 'Понеділок'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '6' and subject.day == 'Вівторок'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '6' and subject.day == 'Середа'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '6' and subject.day == 'Четверг'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}
+                {% if subject.lesson_number == '6' and subject.day == 'П`ятниця'%}
+                <td>{{subject.subject_name}} {{subject.teacher_name}} {{subject.room_number}},
+                                                  {{subject.work_type}} {{subject.week_type}}</td>
+                {% endif %}

@@ -1,0 +1,219 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image:url(back.png);
+	background-size: cover;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+
+.welcome{
+	margin-left: 40px;
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+}
+.welcome_text{
+
+	margin: 20px;
+
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 52px;
+	line-height: 71px;
+
+	color: #FFFFFF;
+}
+
+.welcome_info{
+	margin: 20px;
+
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 33px;
+
+	color: #FFFFFF;
+
+}
+
+.welcome_btn{
+	margin-top: 40px;
+	margin: 20px;
+	text-decoration: none;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #FFFFFF;
+	border-radius: 30px;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+}
+
+.welcome_btn_pos{
+	display: flex;
+	flex-direction: row;
+}
+.login{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.log_pos{
+	width: 622px;
+	display: flex;
+	justify-content: flex-end;
+}
+.login_win{
+	margin: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #FFFFFF;
+	border-radius: 30px;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	background: #FFFFFF;
+	border-radius: 30px;
+		border-color: None;
+
+
+}
+
+input[type=submit]{
+	margin: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #FFFFFF;
+	border-radius: 30px;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	background: #FFFFFF;
+	border-radius: 30px;
+	border-color: None;
+	justify-content: flex-end;
+
+}
+
+.login_text{
+		margin: 20px;
+
+	
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 33px;
+
+	color: #FFFFFF;
+
+}
+
+.menu_pos{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+table{
+	background: #FFFFFF;
+	text-align: center;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 33px;
+}
+
+td{
+	padding: 15px;}
+
+.tabl_pos{
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+input[type=text], input[type=email], input[type=tel], input[type=password], input[type=radio]{
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #FFFFFF;
+	border-radius: 30px;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	background: #FFFFFF;
+	border-radius: 30px;
+	border-color: None;
+}
+
+option, select{
+	margin: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #FFFFFF;
+	border-radius: 30px;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	background: #FFFFFF;
+	border-radius: 30px;
+	border-color: None;
+}
+
+label{
+			margin: 20px;
+
+	
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 33px;
+
+	color: #FFFFFF;
+}
+
+.radio{
+	margin: 10px;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+
+	color: #FFFFFF;
+}
+
+.reg_pos{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.together{
+	display: flex;
+	align-items: center;
+}

@@ -4,30 +4,41 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Do It's - registration</title>
+		<link rel="stylesheet" href="../static/style.css">
 	</head>
 	<body>
 		<div class="login">
 			<form class="login_form" method="post" >
-
+				<div class="reg_pos">
+				<div class="together">
         		<label for="second_name"><b>Введіть вашу фамілію</b></label>
     			<input type="text" placeholder="Фамілія" name="second_name" required><br>
+    		</div>
+    		<div class="together">
 
     			<label for="first_name"><b>Введіть ваше ім'я</b></label>
     			<input type="text" placeholder="Ім'я" name="first_name" required><br>
-
+</div>
+<div class="together">
     			<label for="patronymic"><b>Введіть ваше побатькове</b></label>
     			<input type="text" placeholder="Побатькове" name="patronymic" required><br>
-
+</div>
+<div class="together">
     			<label for="number_of_student_ticket"><b>Введіть номер студенського квитка</b></label>
     			<input type="text" placeholder="Номер" name="number_of_student_ticket" required><br>
-
-    			<legend>Оберіть ваш інститут</legend>
-        		<input type="radio" name="institute" value="Навчально-науковий інститут Бізнесу та соціальних комунікацій">Навчально-науковий інститут Бізнесу та соціальних комунікацій </input><br>
-        		
-        		<input type="radio" name="institute" value="Автоматизація та комп’ютерно-інтегровані технології">Автоматизація та комп’ютерно-інтегровані технології </input> <br>
-        		<input type="radio" name="institute" value="авчально-науковому інституті радіо, телебачення та інформаційної безпеки">Навчально-науковому інституті радіо, телебачення та інформаційної безпеки</input> <br>
-        		<input type="radio" name="institute" value="Телекомунікації та радіотехніка">Телекомунікації та радіотехніка</input><br>
-
+</div>
+<div class="together">
+    			<label for="institute"><b>Оберіть ваш інститут</b></label>
+				<select required name="institute">
+    			<option disabled>Оберіть ваш інститут</option>
+				<option value="Навчально-науковий інститут Бізнесу та соціальних комунікацій">Навчально-науковий інститут Бізнесу та соціальних комунікацій </option><br>
+        		<option value="Автоматизація та комп’ютерно-інтегровані технології">Автоматизація та комп’ютерно-інтегровані технології </option> <br>
+        		<option value="авчально-науковому інституті радіо, телебачення та інформаційної безпеки">Навчально-науковому інституті радіо, телебачення та інформаційної безпеки</option> <br>
+        		<option value="Телекомунікації та радіотехніка">Телекомунікації та радіотехніка</option><br>
+				</select><br>
+</div>
+<div class="together">
+				<label for="speciality"><b>Оберіть вашу спеціальність</b></label>
         		<select required name="speciality">
     			<option disabled>Оберіть вашу спеціальність</option>
     			<option value="051, Економіка">051 Економіка</option>
@@ -42,8 +53,10 @@
     			<option value="121, Інженерія програмного забезпечення">121 Інженерія програмного забезпечення</option>
     			<option value="122, Комп'ютерні науки">122 Комп'ютерні науки</option>
     			<option value="172, Телекомунікацї та радіотехніка">172 Телекомунікацї та радіотехніка</option>
-   				</select>
-
+   				</select><br>
+</div>
+<div class="together">
+				<label for="year_of_study"><b>Оберіть рік навчання (курс)</b></label>
    				<select required name="year_of_study">
     			<option disabled>Оберіть рік навчання (курс)</option>
     			<option value="1">1</option>
@@ -52,20 +65,27 @@
     			<option value="4">4</option>
     			<option value="5">5</option>
     			<option value="6">6</option>
-
+</select>
+</div>
+<div class="together">
     			<label for="group_name"><b>Назва групи</b></label>
     			<input type="text" placeholder="група" name="group_name" required><br>
-
+</div>
+<div class="together">
     			<label for="email"><b>Введіть електронну адресу</b></label>
     			<input type="email" placeholder="Електронна адреса" name="email" required><br>
-
+</div>
+<div class="together">
     			<label for="telephone"><b>Введіть номер мобільного телефону</b></label>
     			<input type="tel" placeholder="Номер мобільного телефону" name="telephone" required><br>
-
+</div>
+<div class="together">
     			<label for="password"><b>Введіть пароль</b></label>
     			<input type="password" placeholder="Пароль" name="password" required><br>
-
+</div>
     			<input type="submit" value="Зареєструватись">
+    		</select>
+    	</div>
 			</form>
 		</div>
 	</body>

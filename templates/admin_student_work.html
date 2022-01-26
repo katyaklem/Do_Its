@@ -4,15 +4,48 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>My_FB</title>
+		<link rel="stylesheet" href="../static/style.css">
 	</head>
 	<body>
 		<div>
-			<p>Доброго дня {{username}}! Оберіть данні для роботи.</p>
+			<div class="welcome">
+			<p class="welcome_text">Оберіть групу розклад якої потрібно змінити.</p>
+		</div>
 			<div>
-				<a href="admin_student_schedule">Змінити розклад</a>
-				<a href="">Додати старосту до групи</a>
+				<form class="login_form" method="post" >
+					<div class="together">
+					<label for="speciality"><b>Оберіть спеціальність</b></label>
+					<select required name="speciality">
+					<option disabled>Оберіть спеціальність</option>
+					<option value="051, Економіка">051 Економіка</option>
+					<option value="073, Менеджмент">073 Менеджмент</option>
+					<option value="054, Соціологія">054 Соціологія</option>
+					<option value="061, Журналістика">061 Журналістика</option>
+					<option value="153, Мікро- та нано системна техніка">153 Мікро- та нано системна техніка</option>
+					<option value="151, Автоматизація та комп’ютерно- інтегровані технології">151 Автоматизація та комп’ютерно- інтегровані технології</option>
+					<option value="275, Транспортні технології">275 Транспортні технології</option>
+					<option value="011, Освітні, педагогічні науки">011 Освітні, педагогічні науки</option>
+					<option value="125, Кібербезбека">125 Кібербезбека</option>
+					<option value="121, Інженерія програмного забезпечення">121 Інженерія програмного забезпечення</option>
+					<option value="122, Комп'ютерні науки">122 Комп'ютерні науки</option>
+					<option value="172, Телекомунікацї та радіотехніка">172 Телекомунікацї та радіотехніка</option>
+					</select>
+				</div>
+<div class="together">
+<label for="year_of_study"><b>Оберіть рік навчання (курс)</b></label>
+					<select required name="year_of_study">
+					<option disabled>Оберіть рік навчання (курс)</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					</select>
+</div>
+					<input type="submit" href="/admin_student_work" value="Змінити розклад">
+				</form>
 			</div>
-			<a href="/logout">Logout</a>
 		</div>
 	</body>
 </html>

@@ -4,14 +4,17 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>My_FB</title>
+		<link rel="stylesheet" href="../static/style.css">
 	</head>
 	<body>
 		<div>
 			{% if username %}
-			<p>Доброго дня {{username}}! Оберіть данні для роботи.</p>
-			<div>
-				<a href="admin_student_work">Робота з данними студентів</a>
-				<a href="">Робота з данними викладачів</a>
+			<div class="welcome">
+			<p class="welcome_text">Доброго дня {{username}}! Оберіть данні для роботи.</p>
+		</div>
+			<div class="menu_pos">
+				<a class="welcome_btn" href="admin_student_work">Робота з данними студентів</a>
+				<a class="welcome_btn" href="">Робота з данними викладачів</a>
 			</div>
 			<a href="/logout">Logout</a>
 			{% else %}

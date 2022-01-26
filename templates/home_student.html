@@ -4,15 +4,27 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>My_FB</title>
+		<link rel="stylesheet" href="../static/style.css">
 	</head>
 	<body>
 		<div>
 			{% if username %}
-			<p>Merry Christmas {{username}}!</p>
-			<a href="/logout">Logout</a>
+			<div class="welcome">
+			<p class="welcome_text">Доброго дня {{username}}!</p>
+			<div class="menu_pos">
+			<a class="welcome_btn" href="/show_student_in_group">Показати список группи</a>
+			<a class="welcome_btn" href="/show_student_schedule">Показати розклад</a>
+			<a class="welcome_btn" href="/show_subjects_and_teachers">Показати предмети та викладачів</a>
+			<a class="welcome_btn" href="/show_books">Показати учбову літературу</a>
+			<a class="welcome_btn" href="/logout">Вихід</a>
+			</div>
+			</div>
 			{% else %}
-			<p>You are not logged in</p>
-			<a href="/login">Login</a>
+			<div class="login">
+			<p class="welcome_text">Будьласка увійдіть до свого облікового запису або зарейструйтесь якщо ви ще не зареєстровані</p>
+			<a сlass="welcome_btn" href="login_student">Увійти</a>
+			<a сlass="welcome_btn" href="registration_student">Зареєструватись</a>
+			</div>
 			{% endif %}
 		</div>
 	</body>

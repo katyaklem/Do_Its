@@ -4,17 +4,22 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Do It's - login</title>
+		<link rel="stylesheet" href="../static/style.css">
 	</head>
 	<body>
 		<div class="login">
 			<form class="login_form" method="post">
-				<label for="email"><b>Введіть електронну адресу</b></label>
-    			<input type="text" placeholder="Електронна адреса" name="email" required><br>
-
-    			<label for="password"><b>Введіть пароль</b></label>
-    			<input type="password" placeholder="Пароль" name="password" required><br>
-
-    			<input type="submit" value="Увійти">
+				<div class="log_pos">
+				<label class="login_text" for="email"><b>Введіть електронну адресу</b></label>
+    			<input class="login_win" type="text" placeholder="Електронна адреса" name="email" required><br>
+    		</div>
+    		<div class="log_pos">
+    			<label class="login_text" for="password"><b>Введіть пароль</b></label>
+    			<input class="login_win" type="password" placeholder="Пароль" name="password" required><br>
+    		</div>
+    		<div class="log_pos">
+    			<input class="login_btn" type="submit" value="Увійти">
+    		</div>
 			</form>
 		</div>
 	</body>

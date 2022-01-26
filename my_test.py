@@ -11,6 +11,7 @@ from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import validates
 from sqlalchemy.ext.hybrid import hybrid_property
+from Do_Its import Day_of_the_week_student
 
 import re
 import bcrypt
@@ -23,11 +24,47 @@ GROUP_NAME = {'051': 'ЕК', '073': 'МН', '054': 'СЦ','061': 'ЖР','153': '
 eng = create_engine('sqlite:///Do_Its.db')
 Base = declarative_base()
 
+'''
+session_maker = sessionmaker(bind=eng)
+db_session = session_maker()
+
+schedule = {'Понеділок':{'1':[], '2':[]}, 'Вівторок':{'1':[], '2':[]}}
+subject_request = db_session.query(Day_of_the_week_student).all()
+for subject in subject_request:
+    print(subject)
+
+for subject in subject_request:
+    print(subject.day)
+    print(schedule.items())
+    if list(schedule.keys())[0] == subject.day:
+        if list(schedule['Понеділок'].keys())[0] == subject.lesson_number:
+            schedule['Понеділок']['1'] = [subject.subject_name, subject.teacher_name, subject.room_number, subject.work_type, subject.week_type]
+        else:
+            schedule['Понеділок']['2'] = [subject.subject_name, subject.teacher_name, subject.room_number,
+                                          subject.work_type, subject.week_type]
+    else:
+        if schedule['Вівторок']['1'] == subject.lesson_number:
+            schedule['Вівторок']['1'] = [subject.subject_name, subject.teacher_name, subject.room_number,
+                                          subject.work_type, subject.week_type]
+        else:
+            schedule['Вівторок']['2'] = [subject.subject_name, subject.teacher_name, subject.room_number,
+                                          subject.work_type, subject.week_type]
+print(schedule)
+
+@app.route('/', methods=['GET', 'POST'])
+def test():
+    return render_template('test.html', schedule={schedule})
+
+if __name__ == "__main__":
+    app.run()
+'''
+'''
 year_of_study = ['1', '2', '3', '4', '5', '6']
 for number_of_speciality in GROUP_NAME:
     for year in year_of_study:
         group_name = year + GROUP_NAME[number_of_speciality]
         print(group_name)
+'''
 
 '''
 class Student(Base):

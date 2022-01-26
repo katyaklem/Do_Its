@@ -6,43 +6,7 @@
     <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
-    <p class="welcome_text">{{group_name}}</p>
-    <form class="schedule_form" method="post">
-            <select required name="day">
-    			<option disabled>День тиждня</option>
-    			<option value="Понеділок">Понеділок</option>
-                <option value="Вівторок">Вівторок</option>
-                <option value="Середа">Середа</option>
-                <option value="Четверг">Четверг</option>
-                <option value="П'ятниця">П'ятниця</option>
-            </select>
-            <select required name="lesson_number">
-    			<option disabled>Номер пари</option>
-    			<option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
-            <input type="text" placeholder="Назва предмету" name="subject_name" required>
-            <input type="text" placeholder="Викладач" name="teacher_name" required>
-            <input type="text" placeholder="Номер кабінету" name="room_number" required>
-            <div class="together">
-            <label>Вид роботи</label><br>
-            <input type="radio" name="work_type" value="Лк"><p class="radio"> Лк </p></input> <br>
-            <input type="radio" name="work_type" value="Пр"><p class="radio"> Пр</p></input><br>
-            <input type="radio" name="work_type" value="Лб"><p class="radio"> Лб</p></input><br>
-        </div>
-        <div class="together">
-            <label>Номер тиждня</label><br>
-            <input type="radio" name="week_type" value="П"><p class="radio"> Парний тиждень</p></input><br>
-            <input type="radio" name="week_type" value="НП"><p class="radio"> Непарний тиждень</p></input><br>
-            <input type="radio" name="week_type" value="О"><p class="radio"> Незалежно від тиждня</p></input><br>
-        </div>
-         <input type="submit" value="Додати пару">
-    </form>
-<div class="tabl_pos">
+    <div class="tabl_pos">
     <table>
         <tr>
             <td></td>
@@ -178,8 +142,8 @@
                 {% endif %}
             {% endfor %}
         </tr>
-
     </table>
 </div>
+     <a class="welcome_btn" href="home_student">На головну</a>
 </body>
 </html>
